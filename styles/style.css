@@ -4,7 +4,9 @@ html {
   box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: inherit;
 }
 
@@ -70,7 +72,8 @@ body {
 .feedbackCard p {
   color: hsl(217deg, 12%, 63%);
 }
-.feedbackCard h1, .feedbackCard p {
+.feedbackCard h1,
+.feedbackCard p {
   margin: 0.5rem 0;
 }
 
@@ -94,6 +97,9 @@ body {
   color: hsl(0deg, 0%, 100%);
   justify-content: space-between;
 }
+.feedbackScale li {
+  list-style-type: none;
+}
 .feedbackScale .scaleItem {
   /* Those first 5 properties make the circles */
   height: 3rem;
@@ -101,7 +107,6 @@ body {
   line-height: 3rem;
   text-align: center;
   border-radius: 50%;
-  list-style-type: none;
   background-color: hsl(213deg, 19%, 18%);
   color: hsl(217deg, 12%, 63%);
 }
