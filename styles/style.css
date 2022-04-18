@@ -1,0 +1,162 @@
+/*Linear gradient cannot be used as background-color, you must use it as background-image!!!!*/
+/* global styles */
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(216deg, 12%, 8%);
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 15px;
+  padding: 2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*layout*/
+.isResponsive {
+  display: flex;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 23.4375rem;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*card with feedback*/
+.feedbackCard {
+  max-width: 23.4375rem;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: linear-gradient(to top, hsl(216deg, 12%, 8%), hsl(213deg, 19%, 18%));
+  padding: 2rem;
+}
+.feedbackCard h1 {
+  color: hsl(0deg, 0%, 100%);
+}
+.feedbackCard p {
+  color: hsl(217deg, 12%, 63%);
+}
+.feedbackCard h1, .feedbackCard p {
+  margin: 0.5rem 0;
+}
+
+@media only screen and (min-width: 23.4375rem) {
+  .container {
+    max-width: 56.25rem;
+  }
+}
+.imageWrapper {
+  padding: 0.75rem;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+}
+.imageWrapper img {
+  display: block;
+}
+
+.feedbackScale {
+  width: 100%;
+  margin: 1.5rem 0;
+  color: hsl(0deg, 0%, 100%);
+  justify-content: space-between;
+}
+.feedbackScale .scaleItem {
+  /* Those first 5 properties make the circles */
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  list-style-type: none;
+  background-color: hsl(213deg, 19%, 18%);
+  color: hsl(217deg, 12%, 63%);
+}
+.feedbackScale .scaleItem:hover, .feedbackScale .scaleItem:focus-visible {
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.feedbackScale .scaleItem.active {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.submitButton {
+  width: 100%;
+  background-color: hsl(25deg, 97%, 53%);
+  border-radius: 2rem;
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+.submitButton:hover, .submitButton:focus-visible {
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+
+/*thank you card*/
+.thankYouCard {
+  max-width: 23.4375rem;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to top, hsl(216deg, 12%, 8%), hsl(213deg, 19%, 18%));
+  padding: 2rem;
+}
+.thankYouCard h1 {
+  color: hsl(0deg, 0%, 100%);
+}
+.thankYouCard p {
+  color: hsl(217deg, 12%, 63%);
+  margin: 0;
+  text-align: center;
+}
+
+.sentFeedback {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(213deg, 19%, 18%);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}/*# sourceMappingURL=style.css.map */

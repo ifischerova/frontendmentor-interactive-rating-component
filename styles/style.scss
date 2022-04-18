@@ -1,0 +1,192 @@
+//Pixels to rem
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem; 
+  @return $remValue;
+}
+
+//Colors
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(217, 12%, 63%);
+$mediumGray: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+
+/*Linear gradient cannot be used as background-color, you must use it as background-image!!!!*/
+$cardColor: linear-gradient(to top, $veryDarkBlue, $darkBlue);
+
+//Fonts
+$base-font-size: 15px;
+$font-primary: 'Overpass', sans-serif;
+$weight-normal: 400;
+$weight-bold: 700;
+
+//Radius
+$radius: toRem(16);
+
+//Breakpoint
+$desktopLayout: toRem(375);
+
+/* global styles */
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: $veryDarkBlue;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  font-size: $base-font-size; 
+  padding: toRem(32);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*layout*/
+.isResponsive {
+  display: flex;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: toRem(375);
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*card with feedback*/
+.feedbackCard {
+  max-width: toRem(375);
+  width: 100%;
+  border-radius: $radius;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: $cardColor ;
+  padding: toRem(32);
+  h1 {
+    color: $white;
+  }
+  p {
+    color: $lightGray;
+  }
+  h1, p {
+    margin: toRem(8) 0;
+  }
+}
+
+@media only screen and (min-width: $desktopLayout) {
+  .container {
+    max-width: toRem(900);
+  }
+}
+
+.imageWrapper {
+  padding: toRem(12);
+  border-radius: 50%;
+  background-color: $darkBlue;
+  img {
+    display: block;
+  }
+}
+
+.feedbackScale {
+  width: 100%;
+  margin: toRem(24) 0;
+  color: $white;
+  justify-content: space-between;
+  .scaleItem {
+    /* Those first 5 properties make the circles */
+    height: toRem(48);
+    width: toRem(48);
+    line-height: toRem(48);
+    text-align: center;
+    border-radius: 50%;
+    list-style-type: none;
+    background-color: $darkBlue;
+    color: $lightGray;
+    &:hover,
+    &:focus-visible{
+    cursor: grab;
+    background-color: $orange;
+    color: $white;
+    }
+    &.active {
+    background-color: $lightGray;
+    color: $white;
+    }
+  }
+}
+
+.submitButton {
+  width: 100%;
+  background-color: $orange;
+  border-radius: toRem(32);
+  margin: toRem(24) 0;
+  padding: toRem(12);
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  &:hover,
+  &:focus-visible {
+    cursor: grab;
+    background-color: $white;
+    color: $orange;
+  }  
+}
+
+/*thank you card*/
+.thankYouCard {
+  max-width: toRem(375);
+  width: 100%;
+  border-radius: $radius;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  background-image: $cardColor ;
+  padding: toRem(32);
+  h1 {
+    color: $white;
+  }
+  p {
+    color: $lightGray;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.sentFeedback {
+  color: $orange;
+  background-color: $darkBlue;
+  padding: toRem(8) toRem(16);
+  margin-top: toRem(16);
+  border-radius: $radius;
+}
