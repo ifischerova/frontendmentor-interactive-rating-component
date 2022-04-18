@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Give a feedback to our support and help us to improve."
+    />
+    <script src="app.js" type="text/javascript" defer></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Iva Fischerova | Frontend Mentor | Interactive rating component</title>
-</head>
-<body>
+    <title>
+      Iva Fischerova | Frontend Mentor | Interactive rating component
+    </title>
+  </head>
 
-  <!-- Rating state start -->
+  <body>
+    <main class="container isResponsive">
+      <section class="feedbackCard isResponsive">
+        <div class="imageWrapper">
+          <img
+            src="./images/icon-star.svg"
+            class="backgroundDesktop"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
 
-  How did we do?
+        <h1>How did we do?</h1>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
 
-  1 2 3 4 5
+        <ul class="feedbackScale isResponsive">
+          <li class="scaleItem" role="button" data-rating="1">1</li>
+          <li class="scaleItem" role="button">2</li>
+          <li class="scaleItem" role="button">3</li>
+          <li class="scaleItem" role="button">4</li>
+          <li class="scaleItem" role="button">5</li>
+        </ul>
 
-  Submit
+        <a class="submitButton" href="#" onclick="showThankYou()"><span class="sr-only"></span>SUBMIT</a>
+      </section>
 
-  <!-- Rating state end -->
+      <section class="thankYouCard isResponsive hidden">
+        <div class="illustrationWrapper">
+          <img
+            src="./images/illustration-thank-you.svg"
+            class="backgroundDesktop"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <div class="sentFeedback">
+          You selected
+          <span id="rating"></span>
+          <!-- Add rating here -->
+          out of 5
+        </div>
 
-  <!-- Thank you state start -->
+        <h1>Thank you!</h1>
 
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-</body>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
