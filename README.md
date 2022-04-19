@@ -49,7 +49,7 @@ I few new things in JS:
 - do NOT use dot when giving the class name in `document.getElementsByClassName()` ! :-D 
 
 CSS:
-- linear-gradient CANNOT be used as the `backgroung-color` -> it needs to be used as `background-image`!!
+- linear-gradient CANNOT be used as the `background-color` -> it needs to be used as `background-image`!!
 - it is really not easy to create a perfect circle of the text is in it. 
   I defined it by using these five properties (height; width; line-height; text-align; border-radius) but I am not sure how "elegant" this solution is.
 
