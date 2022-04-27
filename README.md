@@ -45,13 +45,12 @@ Users should be able to:
 I few new things in JS: 
 - I spent a really big amount of time to persuade the "thank you card" to be shown after click on submit button but on the other hand I am quite sure that I will remember the solution and consequences for my next projects quite well ==> be aware of what is returned (only one element vs object vs collection of elements!?)
 - `innerHTML` gets the text from some HTML element, `outerHTML` gets the text from the tags itself.
-- if I want to get 
 - do NOT use dot when giving the class name in `document.getElementsByClassName()` ! :-D 
 
 CSS:
 - linear-gradient CANNOT be used as the `background-color` -> it needs to be used as `background-image`!!
 - it is really not easy to create a perfect circle of the text is in it. 
-  I defined it by using these five properties (height; width; line-height; text-align; border-radius) but I am not sure how "elegant" this solution is.
+  I defined it by using these five properties (height; width; line-height; text-align; border-radius).
 
 Lighthouse audit:
 - cannot be applied on only HTML file opened in the browser. To avoid the deployment and if you have python installed you can run command (WIN) `python -m http.server` when you are in the folder with the proper project -> the command will start some local server. Go to the `localhost:[port-given-by-the-command]` in the browser and the current project should be visible and you can run the audit. To stop the serve just run `Ctrl+C`. 
