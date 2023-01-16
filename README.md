@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repository](https://github.com/Ivuska/frontendmentor-interactive-rating-component)
-- Live Site URL: [Live solution on GitHub pages](https://ivuska.github.io/frontendmentor-interactive-rating-component/#)
+- Live Site URL: [Live solution on GitHub pages](https://ifischerova.github.io/frontendmentor-interactive-rating-component/#)
 
 ## My process
 
